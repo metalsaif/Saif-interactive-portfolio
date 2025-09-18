@@ -54,7 +54,7 @@ export const Button = ({ children, href }) => {
     flex items-center justify-center 
     transition-all duration-300 ease-in-out
     bg-[#A52A2A] 
-    hover:bg-[#F47C2E] hover:scale-110
+    hover:bg-orange-400 hover:scale-110
   `;
 
   // If an 'href' prop is passed, render it as an <a> tag.
