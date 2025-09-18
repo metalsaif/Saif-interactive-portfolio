@@ -1,76 +1,56 @@
-import styled from 'styled-components'
+// src/components/NavDropDown/NavDropDown.js
+import React from 'react';
+import { AiOutlineStock, AiOutlineTeam } from 'react-icons/ai';
 
-export const DropDownContainer = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  right: -25%;
-  top: 40px;
-  width: 280px;
-  background-color: #fff;
-  border-radius: 8px;
-  z-index: 100;
-  padding: 4px 0;
-  cursor: default;
-  overflow: hidden;
-  transition: 0.3s ease;
-  visibility: ${({ active }) => active ? 'visible' : 'hidden'};
-  opacity: ${({ active }) => active ? '1' : '0'};
-  transform-origin: top;
-  transform: ${({ active }) => active ? 'scaleY(1)' : 'scaleY(.3)'};
+// Dummy data for demonstration purposes, as it wasn't in the original files
+const dropDownData = [
+  { title: "Project 1", description: "A short description of this project.", icon: <AiOutlineStock size="2rem" /> },
+  { title: "Project 2", description: "Another interesting project link.", icon: <AiOutlineTeam size="2rem" /> },
+  { title: "Project 3", description: "The third and final project link.", icon: <AiOutlineStock size="2rem" /> },
+];
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    top: 32px;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    top: 24px;
-  }
-`
-export const DropDownItem = styled.a`
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-  transition: .3s ease;
-  padding: 12px 16px;
+// The component takes an 'active' prop to control its visibility
+const NavDropDown = ({ active }) => (
+  // This is the old <DropDownContainer>
+  <div
+    className={`
+      absolute flex flex-col right-[-25%] top-[40px] md:top-[32px] sm:top-[24px]
+      w-[280px] bg-white rounded-lg z-[100] py-1 cursor-default overflow-hidden
+      transition-all duration-300 ease-in-out origin-top
+      ${active ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-30'}
+    `}
+  >
+    {dropDownData.map((item, index) => (
+      // This is the old <DropDownItem>
+      <a
+        key={index}
+        href="#" // Replace with actual links
+        className="
+          w-full flex items-start cursor-pointer transition-all duration-300 ease-in-out py-3 px-4
+          hover:scale-105 hover:bg-gray-100
+          hover:shadow-[0_3px_6px_3px_rgba(0,0,0,.15)]
+          even:hover:shadow-[0_0_8px_4px_rgba(0,0,0,.15)]
+          [&:nth-of-type(3n):hover]:shadow-[0_-3px_6px_3px_rgba(0,0,0,.15)]
+        "
+      >
+        {/* This is the old <DropDownIcon> */}
+        <div className="w-8 h-8 mr-4 text-black">
+          {item.icon}
+        </div>
+        {/* This is the old <DropDownTextContainer> */}
+        <div className="flex flex-col">
+          {/* This is the old <DropDownItemTitle> */}
+          <h2 className="text-gray-900 text-lg leading-[26px] text-left">
+            {item.title}
+          </h2>
+          {/* This is the old <DropDownItemDesc> */}
+          <p className="text-gray-900/50 text-sm leading-[22px] text-left">
+            {item.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+);
 
-  &:hover {
-    transform: scale(1.05);
-    background-color: #eee;
-    box-shadow: 0 3px 6px 3px rgba(0,0,0,.3);
-  }
-
-  &:nth-of-type(2n):hover {
-    box-shadow: 0 0 8px 4px rgba(0,0,0,.3);
-  }
-
-  &:nth-of-type(3n):hover {
-    box-shadow: 0 -3px 6px 3px rgba(0,0,0,.3);
-  }
-`
-
-export const DropDownIcon = styled.div`
-  width: 32px;
-  height: 32px;
-  margin-right: 16px;
-`
-
-export const DropDownTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-export const DropDownItemTitle = styled.h2`
-  color: #0f1624;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: start;
-`
-
-export const DropDownItemDesc = styled.p`
-  color: #0f1624;
-  opacity: 0.5;
-  font-size: 14px;
-  line-height: 22px;
-  text-align: start;
-`
+export default NavDropDown;

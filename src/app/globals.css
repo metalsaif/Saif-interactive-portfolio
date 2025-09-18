@@ -1,0 +1,20 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html {
+  cursor: none;
+}
+a, button {
+  cursor: none !important;
+} */
+
+/* 
+  THIS IS THE FINAL, CORRECT CURSOR RULE.
+  The universal selector (*) forces EVERY element to have no default cursor.
+  This is more powerful and will override the browser's default pointer.
+*/
+* {
+  cursor: none !important;
+}

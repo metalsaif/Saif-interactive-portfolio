@@ -1,46 +1,37 @@
 export const projects = [
   {
-    title: 'MERN Memories',
-    description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-      image: '/images/1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'AI Tailwind Refactor Copilot',
+    description: "A developer tool that leverages the OpenAI API to analyze and refactor messy CSS or inline styles into clean, best-practice Tailwind CSS. It streamlines the development process, enforces consistency, and significantly improves code quality and maintainability.",
+    image: '/images/1.png', // Corrected image to match original order
+    tags: ['Next.js', 'TypeScript', 'OpenAI API', 'Tailwind CSS', 'Vercel'],
+    source: 'https://github.com/metalsaif/ai-tailwind-refactor-copilot', // Replace with your actual link
+    visit: 'https://ai-tailwind-refactor-copilot.vercel.app/', // Replace with your actual link
     id: 0,
   },
   {
-    title: 'E-Commerce',
-    description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-    image: '/images/2.png',
-    tags: ['React', 'JavaScript'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'The Interactive Landing Page Grader',
+    description: "An analytics tool that provides an instant, comprehensive audit of any website's landing page. It grades technical performance, SEO, and accessibility based on Core Web Vitals and best practices, offering actionable feedback to help users improve their site's conversion rates.",
+    image: '/images/2.png', // Corrected image to match original order
+    tags: ['Next.js', 'React', 'Framer Motion', 'Performance API', 'SEO'],
+    source: 'https://github.com/metalsaif/landing-page-grader', // Replace with your actual link
+    visit: 'https://landing-page-grader-ashy.vercel.app/', // Replace with your actual link
     id: 1,
   },
   {
-    title: 'WebRTC App',
-    description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-      image: '/images/3.jpg',
-      tags: ['React', 'WebRTC'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'INCOMPLEX - Architectural Firm Website',
+    description: "A client project for a modern architectural firm, requiring a visually stunning and highly polished digital presence. The site features a minimalist UI, intuitive navigation, and sophisticated animations built with GreenSock (GSAP) to reflect the firm's innovative design philosophy.",
+    image: '/images/3.png',
+    tags: ['React', 'Next.js', 'GreenSock (GSAP)', 'Animation', 'UI/UX Design'],
+    source: 'https://github.com/metalsaif/Incomplex_website_final', // Replace with your actual link
+    visit: 'https://incomplexdesign.com', // Replace with your actual link
     id: 2,
-  },
-  {
-    title: 'Unichat',
-    description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
-    image: '/images/4.jpg',
-    tags: ['React', 'ChatEngine', 'Firebase'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
-    id: 3,
   },
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
+  { year: 2017, text: 'Started my journey into web development.', },
+  { year: 2018, text: 'Began working as a freelance developer, building client websites.', },
+  { year: 2019, text: 'Focused on advanced JavaScript and React frameworks.', },
+  { year: 2020, text: 'Started building full-stack projects and contributing to open source.', },
+  { year: 2021, text: 'Pivoted to specializing in high-performance front-end applications.', },
 ];

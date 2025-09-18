@@ -1,23 +1,19 @@
+// src/components/Hero/Hero.js
 import React from 'react';
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+// We only import the content components now, not the layout ones.
+import { SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
 
-const Hero = (props) => (
+const Hero = () => (
+  // We use a React Fragment (<>) which adds no extra divs or styles.
   <>
-    <Section row nopadding>
-      <LeftSection>
-        <SectionTitle main center>
-          Welcome To <br />
-          My Personal Portfolio
-        </SectionTitle>
-        <SectionText>
-        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
-        </SectionText>
-        <Button onClick={props.handleClick}>Learn More</Button>
-      </LeftSection>
-    </Section>
+    <SectionTitle main>
+      Saif Rahman
+    </SectionTitle>
+    <SectionText>
+      Front-End Engineer | Building High-Performance Web Applications
+    </SectionText>
+    <Button>Contact Me</Button>
   </>
 );
 
