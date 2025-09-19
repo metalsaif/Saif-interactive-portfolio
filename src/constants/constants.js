@@ -29,9 +29,9 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'Started my journey into web development.', },
-  { year: 2018, text: 'Began working as a freelance developer, building client websites.', },
-  { year: 2019, text: 'Focused on advanced JavaScript and React frameworks.', },
-  { year: 2020, text: 'Started building full-stack projects and contributing to open source.', },
-  { year: 2021, text: 'Pivoted to specializing in high-performance front-end applications.', },
+  { year: 2015, text: 'Began my BSc in Building Engineering, building a foundation in structural design and systems thinking.', },
+  { year: 2022, text: 'Started my Master\'s in Construction Robotics, bridging the gap between physical engineering and software.', },
+  { year: 2023, text: 'Discovered a passion for the user-facing side of software, diving deep into React, Next.js, and TypeScript.', },
+  { year: 2024, text: 'Began building complex projects, applying my engineering precision to front-end development.', },
+  { year: 2025, text: 'Launched my freelance career to build high-performance, precision-engineered web applications for businesses.', },
 ];

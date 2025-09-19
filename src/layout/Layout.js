@@ -7,9 +7,9 @@ import CustomCursor from '../components/CustomCursor/CustomCursor';
 
 export const Layout = ({ children }) => {
   return (
-    // THIS IS THE FIX: We add the horizontal padding (px) here.
-    // This will apply consistent side margins to your entire site.
-    <div className="max-w-7xl mx-auto w-full">
+    // THIS IS NOW THE SINGLE SOURCE OF TRUTH FOR YOUR LAYOUT
+    // It controls the max-width, centering, and side padding for the entire site.
+    <div className="max-w-7xl mx-auto w-full px-4 sm:px-12">
       <CustomCursor />
       <Header />
       <main>{children}</main>

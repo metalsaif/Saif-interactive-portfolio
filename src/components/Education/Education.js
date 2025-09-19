@@ -5,7 +5,7 @@ import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalCompon
 const education = [
   {
     degree: 'Master of Science in Construction Robotics',
-    university: 'RWTH Aachen University',
+    university: 'RWTH Aachen University, Germany',
     dates: 'April 2022 – Present',
     focus: 'Key Focus: Digitalization, Automation, Additive manufacturing, BIM and Robotics in Construction'
   },
@@ -25,10 +25,10 @@ const Education = () => (
       {education.map((edu, index) => (
         <div key={index} className="pb-4 border-b border-white/10">
           <div className="flex justify-between items-baseline">
-            <h3 className="text-2xl font-bold text-white">{edu.degree}</h3>
-            <p className="text-md text-white/75">{edu.dates}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-white">{edu.degree}</h3>
+            <p className="text-sm md:text-md text-white/75">{edu.dates}</p>
           </div>
-          <p className="text-lg text-white/50 mb-4">{edu.university}</p>
+          <p className="text-base md:text-lg text-white/50 mb-4">{edu.university}</p>
           <p className="text-white/75">{edu.focus}</p>
         </div>
       ))}

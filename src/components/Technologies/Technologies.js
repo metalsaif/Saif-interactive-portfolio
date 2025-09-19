@@ -1,8 +1,8 @@
 // src/components/Technologies/Technologies.js
 import React from 'react';
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { FaCube } from 'react-icons/fa';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { FaCube } from 'react-icons/fa'; // FaCube is imported from 'react-icons/fa'
 
 const Technologies = () => (
   <Section id="tech">
@@ -11,61 +11,62 @@ const Technologies = () => (
     <SectionText>
       I've worked with a range of technologies to build modern, high-performance web applications from the ground up.
     </SectionText>
-    {/* This is the old <List> */}
-     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 my-12">
-      {/* This is the old <ListItem> */}
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
+    
+    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 my-12 place-items-center sm:place-items-start">
+      
+      {/* Front-End Item */}
+      <li className="max-w-xs flex flex-col items-center sm:flex-row sm:items-start">
+        {/* Icon Container: Added padding (p-2) to make the background visible */}
+        <div className="mb-4 p-2 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
           <DiReact size="3rem" />
         </div>
-        {/* This is the old <ListContainer> */}
-        <div className="flex flex-col">
-          {/* This is the old <ListTitle> */}
-          <h4 className="font-bold text-xl sm:text-2xl text-white mb-2">
+        {/* Text Container: Centered on mobile, left-aligned on desktop */}
+        <div className="flex flex-col text-center sm:text-left">
+          <h4 className="font-bold text-2xl text-white mb-2">
             Front-End
           </h4>
-          {/* This is the old <ListParagraph> */}
-          <p className="text-base sm:text-lg text-white/75">
-            Building high-performance, scalable applications <br />
-            with React, Next.js, and TypeScript.
+          <p className="text-lg text-white/75">
+            Building high-performance, scalable applications with React, Next.js, and TypeScript.
           </p>
         </div>
       </li>
 
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
+      {/* Back-End Item */}
+      <li className="max-w-xs flex flex-col items-center sm:flex-row sm:items-start">
+        <div className="mb-4 p-2 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
           <DiFirebase size="3rem" />
         </div>
-        <div className="flex flex-col">
-          <h4 className="font-bold text-xl sm:text-2xl text-white mb-2">
+        <div className="flex flex-col text-center sm:text-left">
+          <h4 className="font-bold text-2xl text-white mb-2">
             Back-End
           </h4>
-          <p className="text-base sm:text-lg text-white/75">
-            Developing robust RESTful APIs and connecting <br />
-            to both SQL and NoSQL databases.
+          <p className="text-lg text-white/75">
+            Developing robust RESTful APIs and connecting to both SQL and NoSQL databases.
           </p>
         </div>
       </li>
 
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
+      {/* UI/UX Item */}
+      <li className="max-w-xs flex flex-col items-center sm:flex-row sm:items-start">
+        <div className="mb-4 p-2 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
           <DiZend size="3rem" />
         </div>
-        <div className="flex flex-col">
-          <h4 className="font-bold text-xl sm:text-2xl text-white mb-2">
+        <div className="flex flex-col text-center sm:text-left">
+          <h4 className="font-bold text-2xl text-white mb-2">
             UI/UX
           </h4>
-          <p className="text-base sm:text-lg text-white/75">
-            Creating intuitive user interfaces from <br />
-            twireframe to high-fidelity prototype in Figma.
+          <p className="text-lg text-white/75">
+            Creating intuitive user interfaces from wireframe to high-fidelity prototype in Figma.
           </p>
         </div>
       </li>
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
-          <FaCube size="3rem" />
+      
+      {/* 3D Item */}
+      <li className="max-w-xs flex flex-col items-center sm:flex-row sm:items-start">
+        <div className="mb-4 p-2 bg-[#A52A2A] rounded-full sm:mb-0 sm:mr-4">
+          <FaCube size="4rem" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-center sm:text-left">
           <h4 className="font-bold text-2xl text-white mb-2">
             3D & Visualization
           </h4>

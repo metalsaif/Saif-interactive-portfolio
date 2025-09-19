@@ -18,8 +18,8 @@ const ContactConstruction = () => {
           It uses our smart <Button> component with an href prop,
           which will render it as a link to your CV.
         */}
-        <div className="flex justify-center">
-          <Button href="/Saif_Rahman_CV.pdf">
+        <div className="flex justify-center ">
+          <Button href="/Saif_Rahman_CV.pdf" center>
             Download My CV
           </Button>
         </div>

@@ -1,25 +1,27 @@
 // src/components/SkillsConstruction/SkillsConstruction.js
 import React from 'react';
-// 1. Import new, relevant icons from the react-icons library
 import { FaLaptopCode, FaTools, FaLanguage } from 'react-icons/fa';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 
 const SkillsConstruction = () => (
-  <Section id="skills"> {/* Renamed id for clarity */}
+  <Section id="skills">
     <SectionDivider divider />
     <SectionTitle>Skills</SectionTitle>
     <SectionText>
       I possess a versatile skill set that spans programming, industry-standard engineering software, and multilingual communication.
     </SectionText>
     
-    <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 my-12">
+    {/* THIS IS THE CORRECTED GRID CONTAINER */}
+    {/* ===================================== */}
+    {/* We add "place-items-center md:place-items-start" to control alignment */}
+    <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 my-12 place-items-center md:place-items-start">
       
-      {/* 2. Replaced content for the first list item: CODING */}
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 sm:mb-0 sm:mr-4 text-[#C55A11]">
+      {/* Coding Item */}
+      <li className="max-w-xs flex flex-col items-center md:flex-row md:items-start">
+        <div className="mb-4 md:mb-0 md:mr-4 text-[#C55A11]">
           <FaLaptopCode size="4rem" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-center md:text-left">
           <h4 className="font-bold text-2xl text-white mb-2">
             Coding
           </h4>
@@ -29,12 +31,12 @@ const SkillsConstruction = () => (
         </div>
       </li>
 
-      {/* 3. Replaced content for the second list item: SOFTWARE */}
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 sm:mb-0 sm:mr-4 text-[#C55A11]">
+      {/* Software Item */}
+      <li className="max-w-xs flex flex-col items-center md:flex-row md:items-start">
+        <div className="mb-4 md:mb-0 md:mr-4 text-[#C55A11]">
           <FaTools size="4rem" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-center md:text-left">
           <h4 className="font-bold text-2xl text-white mb-2">
             Software
           </h4>
@@ -44,12 +46,12 @@ const SkillsConstruction = () => (
         </div>
       </li>
 
-      {/* 4. Replaced content for the third list item: LANGUAGES */}
-      <li className="max-w-xs flex flex-col sm:flex-row sm:items-center">
-        <div className="mb-4 sm:mb-0 sm:mr-4 text-[#C55A11]">
+      {/* Languages Item */}
+      <li className="max-w-xs flex flex-col items-center md:flex-row md:items-start">
+        <div className="mb-4 md:mb-0 md:mr-4 text-[#C55A11]">
           <FaLanguage size="4rem" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-center md:text-left">
           <h4 className="font-bold text-2xl text-white mb-2">
             Languages
           </h4>
