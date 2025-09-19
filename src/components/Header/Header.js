@@ -1,43 +1,34 @@
-// src/components/Header/Header.js
 'use client';
 import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillBehanceCircle, AiFillLinkedin } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
 import { usePathname } from 'next/navigation';
+import IconMorph from '../IconMorph/IconMorph'; // 1. Import the new component
 
 const Header = () => {
   const pathname = usePathname();
   const isConstructionPage = pathname === '/construction';
+  const linkHref = isConstructionPage ? '/' : '/construction';
+  const linkText = isConstructionPage ? 'Engineering Portfolio' : 'Developer Portfolio';
 
-  // --- THIS IS THE NEW DYNAMIC LOGIC ---
-  // =====================================
-  const switcherHref = isConstructionPage ? '/' : '/construction';
-  const switcherText = isConstructionPage ? 'Developer Portfolio' : 'Engineering Portfolio';
-
-  // We now define the navigation links in an array based on the current page
-  const navLinks = isConstructionPage
-    ? [
-        { href: '#experience', text: 'Experience' },
-        { href: '#projects', text: 'Projects' },
-        { href: '#skills', text: 'Skills' },
-      ]
-    : [
-        { href: '#projects', text: 'Projects' },
-        { href: '#tech', text: 'Technologies' },
-        { href: '#about', text: 'About' },
-      ];
-  // =====================================
+  const navLinks = isConstructionPage ? [
+    { href: '#experience', text: 'Experience' },
+    { href: '#projects', text: 'Projects' },
+    { href: '#skills', text: 'Skills' },
+  ] : [
+    { href: '#projects', text: 'Projects' },
+    { href: '#tech', text: 'Technologies' },
+    { href: '#about', text: 'About' },
+  ];
 
   return (
     <header className="grid grid-cols-2 md:grid-cols-3 gap-x-4 px-4 pt-8 md:px-12">
-      
-      {/* Portfolio Switcher */}
       <div className="col-span-1 flex items-center justify-start">
-        <Link href={switcherHref} legacyBehavior>
+        <Link href={linkHref} legacyBehavior>
           <a className="flex items-center text-white transition-opacity duration-300 hover:opacity-80">
-            <DiCssdeck size="2.5rem" />
-            <span className="ml-2 text-lg md:text-xl">{switcherText}</span>
+            {/* 2. Replace the old icon with the new animated one */}
+            <IconMorph isConstructionPage={isConstructionPage} />
+            <span className="ml-4 text-lg md:text-xl">{linkText}</span>
           </a>
         </Link>
       </div>

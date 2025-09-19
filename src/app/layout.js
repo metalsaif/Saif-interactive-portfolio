@@ -24,10 +24,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${pressStart2P.variable} ${spaceGrotesk.variable}`}>
-      {/* THIS IS THE FINAL FIX: We add the background color class here */}
+    <html lang="en" className="...">
       <body className="bg-background-1 font-main">
         <SiteLayout>
+          {/* This {children} will now be wrapped by our new template.js */}
           {children}
         </SiteLayout>
       </body>
