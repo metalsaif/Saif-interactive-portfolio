@@ -1,4 +1,4 @@
-// src/components/Scene/RobotModel.js
+/// src/components/Scene/RobotModel.js
 'use client';
 import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -7,11 +7,9 @@ import { useGLTF } from '@react-three/drei';
 const Scene = () => {
   const modelRef = useRef();
   const [scrollY, setScrollY] = useState(0);
-
-  // This is your correct model path
   const { scene } = useGLTF('/3d_model/robotic_arm_kuka/scene.gltf');
 
-  // This useEffect hook re-enables the scroll tracking
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -50,9 +48,10 @@ const Scene = () => {
   );
 };
 
+
 const RobotModel = () => {
   return (
-    // We are using your exact camera settings.
+    // We are restoring YOUR CORRECT camera settings for this model.
     <Canvas camera={{ position: [800, 800, -800], fov: 50, near: 0.1, far: 10000 }}>
       <Suspense fallback={null}>
         <Scene />

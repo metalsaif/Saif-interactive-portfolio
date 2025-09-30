@@ -4,13 +4,9 @@ import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
-// This is the new child component that contains all the hooks and logic.
-// It can now safely use useFrame, useGLTF, etc., because it will be rendered INSIDE the Canvas.
 const Scene = () => {
   const modelRef = useRef();
   const [scrollY, setScrollY] = useState(0);
-
-  // Load the model
   const { scene } = useGLTF('/3d_model/gaming_setup/scene.gltf');
 
   // Set up the scroll listener
@@ -41,10 +37,9 @@ const Scene = () => {
   );
 };
 
-// This is the main component that we will export.
-// Its ONLY job is to render the Canvas and the Scene inside it.
 const ComputerModel = () => {
   return (
+    // We are restoring YOUR CORRECT camera settings for this model.
     <Canvas camera={{ position: [0, 5, 10], fov: 30 }}>
       <Suspense fallback={null}>
         <Scene />

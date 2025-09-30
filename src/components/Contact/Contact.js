@@ -8,7 +8,7 @@ const Contact = () => {
     e.preventDefault(); // Prevents the default form submission behavior
     
     // Replace with your email address
-    const email = 'saif.rahman@rwth-aachen.de';
+    const email = 'saif@saifrahman.dev';
     const subject = encodeURIComponent("Portfolio Contact Form Submission");
     
     // This will open the user's default email client

@@ -26,7 +26,7 @@ const Footer = () => {
           <h4 className="font-semibold text-sm uppercase text-white/40 mb-4">
             Email
           </h4>
-          <a href="mailto:saif.rahman@rwth-aachen.de" className="text-base text-white/75 transition-all duration-300 relative hover:text-white hover:translate-x-1.5">
+          <a href="mailto:saif@saifrahman.dev" className="text-base text-white/75 transition-all duration-300 relative hover:text-white hover:translate-x-1.5">
             saif.rahman@rwth-aachen.de
           </a>
         </li>

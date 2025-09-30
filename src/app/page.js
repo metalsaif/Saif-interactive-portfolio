@@ -11,6 +11,7 @@ import { Section } from "../styles/GlobalComponents";
 import Contact from "../components/Contact/Contact"; 
 import ComputerModel from "../components/Scene/ComputerModel";
 
+
 export default function Home() {
   return (
     <>
@@ -37,6 +38,8 @@ export default function Home() {
       <Section className="py-8 bg-background-1">
         <Technologies />
       </Section>
+
+      
       <Section className="py-8 bg-background-1">
         <Timeline />
       </Section>

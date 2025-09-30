@@ -8,7 +8,7 @@ const Projects = () => (
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     {/* This is the old <GridContainer> */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
       
       {projects.map(({ id, image, title, description, tags, source, visit }) => {
         return (

@@ -26,6 +26,17 @@ export const projects = [
     visit: 'https://incomplexdesign.com', // Replace with your actual link
     id: 2,
   },
+
+  {
+  title: 'The Modern Practice - Next.js Dental Showcase',
+  description: "A flagship demo website engineered to be a primary sales asset for high-value dental practices. The project's mission was to achieve a 95+ Google PageSpeed score while delivering a world-class, visually stunning user experience. The tech stack is built on Next.js (App Router) and TypeScript for performance and code quality, with Tailwind CSS for styling. The site features a sophisticated 'Clinical Spa' aesthetic, advanced animations with Framer Motion, seamless page transitions, and a fully responsive layout optimized for all devices.",
+  image: '/images/mp_1.png', // Suggestion: Use a screenshot of the final hero section
+  tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'UI/UX Design', 'High Performance', 'Vercel'],
+  source: 'https://github.com/metalsaif/the-modern-practice', // Your GitHub repository link
+  visit: 'https://the-modern-practice.vercel.app', // Your live Vercel deployment link
+  id: 3,
+},
+  
 ];
 
 export const TimeLineData = [
